@@ -1,0 +1,58 @@
+name: Bug report
+description: A website broke, an ad wasn't blocked, or ShieldX misbehaved.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: "Thanks for testing ShieldX! Please don't include passwords, cookies or personal data."
+  - type: input
+    id: version
+    attributes:
+      label: ShieldX version
+      description: Shown in ShieldX settings → About.
+      placeholder: "0.1.0"
+    validations:
+      required: true
+  - type: input
+    id: chrome
+    attributes:
+      label: Chrome version and operating system
+      description: Copy the first line of chrome://version.
+      placeholder: "Chrome 153 on Windows 11"
+    validations:
+      required: true
+  - type: input
+    id: site
+    attributes:
+      label: Website address
+      placeholder: "https://example.com/page"
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What happened?
+      options:
+        - A website looks broken or doesn't work
+        - An ad or tracker was not blocked
+        - The popup or settings page has a problem
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: What did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: checkboxes
+    id: tried
+    attributes:
+      label: Did these help? (from the ShieldX popup on that site)
+      options:
+        - label: Turning off "Hide ad elements here" fixed it
+        - label: Turning off "Protect this site" fixed it
+  - type: textarea
+    id: errors
+    attributes:
+      label: Errors
+      description: Any errors shown on the ShieldX card in chrome://extensions.
