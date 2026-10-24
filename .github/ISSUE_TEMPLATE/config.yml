@@ -1,1 +1,8 @@
 blank_issues_enabled: true
+contact_links:
+  - name: Download and install guide
+    url: https://github.com/markworldorg/shieldx-releases#download-v012
+    about: Which file to download for your browser, and how to install or update ShieldX.
+  - name: Privacy policy
+    url: https://github.com/markworldorg/shieldx-releases/blob/main/PRIVACY.md
+    about: What ShieldX stores, what it never collects, and why it needs each permission.
