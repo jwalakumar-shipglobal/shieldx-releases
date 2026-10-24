@@ -9,16 +9,29 @@ body:
     id: version
     attributes:
       label: ShieldX version
-      description: Shown in ShieldX settings → About.
-      placeholder: "0.1.0"
+      description: Shown at the bottom of the ShieldX popup, or in ShieldX settings → About.
+      placeholder: "0.1.2"
+    validations:
+      required: true
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Browser
+      options:
+        - Chrome
+        - Microsoft Edge
+        - Brave
+        - Opera
+        - Vivaldi
+        - Firefox
+        - Other
     validations:
       required: true
   - type: input
-    id: chrome
+    id: browser-version
     attributes:
-      label: Chrome version and operating system
-      description: Copy the first line of chrome://version.
-      placeholder: "Chrome 153 on Windows 11"
+      label: Browser version and operating system
+      placeholder: "Edge 141 on Windows 11"
     validations:
       required: true
   - type: input
@@ -32,7 +45,8 @@ body:
       label: What happened?
       options:
         - A website looks broken or doesn't work
-        - An ad or tracker was not blocked
+        - An ad, pop-up or tracker was not blocked
+        - A YouTube ad played
         - The popup or settings page has a problem
         - Something else
     validations:
@@ -55,4 +69,4 @@ body:
     id: errors
     attributes:
       label: Errors
-      description: Any errors shown on the ShieldX card in chrome://extensions.
+      description: Any errors shown on the ShieldX card on your browser's extensions page.
